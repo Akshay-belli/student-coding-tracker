@@ -2,11 +2,9 @@ package com.example.student_tracker.entity;
 
 import com.example.student_tracker.enums.Platform;
 import jakarta.persistence.*;
+import lombok.*;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "coding_profile")
@@ -14,6 +12,7 @@ import lombok.AllArgsConstructor;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"student"})
 public class CodingProfile {
 
     @Id
